@@ -1,0 +1,50 @@
+/* script.js - small interactive behaviors */
+document.addEventListener('DOMContentLoaded', function () {
+  // Set dynamic years in footers
+  const y = new Date().getFullYear();
+  const yearEls = document.querySelectorAll('#year, #year-2, #year-3');
+  yearEls.forEach(el => { if(el) el.textContent = y; });
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('primary-nav');
+  if(navToggle && nav){
+    navToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('show');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  // Simple contact form handling (no backend) - shows a fake success message
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  if(form){
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const msg = form.message.value.trim();
+      if(!name || !email || !msg){
+        status.textContent = 'Please complete all fields.';
+        status.style.color = 'crimson';
+        return;
+      }
+      // simulate send
+      status.style.color = '';
+      status.textContent = 'Sending…';
+      setTimeout(() => {
+        status.style.color = 'green';
+        status.textContent = 'Message sent! I will get back to you shortly.';
+        form.reset();
+      }, 900);
+    });
+  }
+
+  // Add small keyboard accessibility: close mobile nav on Escape
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && nav && nav.classList.contains('show')){
+      nav.classList.remove('show');
+      if(navToggle) navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});

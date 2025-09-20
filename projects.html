@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Vaishnavi Kadam</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Vaishnavi Kadam</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <nav id="primary-nav" class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container projects-page">
+    <section>
+      <h1>Projects</h1>
+      <p>Below are a few projects with short descriptions, technologies and links.</p>
+
+      <article id="project1" class="project">
+        <h2>Static Portfolio on S3 + CloudFront</h2>
+        <p>Hosted HTML/CSS site with CDN, reduced latency via CloudFront, invalidation via GitHub Actions.</p>
+        <p><strong>Tech:</strong> HTML, CSS, AWS S3, CloudFront, GitHub Actions</p>
+        <p><a class="btn ghost" href="#">View repo</a></p>
+      </article>
+
+      <article id="project2" class="project">
+        <h2>Serverless Image Resizer (Lambda)</h2>
+        <p>API Gateway + Lambda resizes images on demand, stores optimized images in S3 for caching.</p>
+        <p><strong>Tech:</strong> Node.js, Lambda, S3, Sharp</p>
+        <p><a class="btn ghost" href="#">View repo</a></p>
+      </article>
+
+      <article id="project3" class="project">
+        <h2>WordPress Blog with Custom Theme</h2>
+        <p>Built and deployed WordPress on EC2 with managed RDS, caches and CDN integration for assets.</p>
+        <p><strong>Tech:</strong> PHP, MySQL, EC2, RDS, CloudFront</p>
+        <p><a class="btn ghost" href="#">View repo</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© <span id="year-3"></span> Vaishnavi Kadam</div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

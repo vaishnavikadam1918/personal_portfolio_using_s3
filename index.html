@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vaishnavi Kadam — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Vaishnavi Kadam</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <nav id="primary-nav" class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi — I'm Vaishnavi</h1>
+          <p class="lead">Cloud & Web Engineer — I build fast, reliable static & dynamic web projects on AWS. I love HTML, CSS, JavaScript and automating deployments.</p>
+          <p>
+            <a class="btn" href="projects.html">See projects</a>
+            <a class="btn ghost" href="about.html">About me</a>
+          </p>
+          <ul class="skills-list" aria-label="Key skills">
+            <li>AWS S3 & CloudFront</li>
+            <li>EC2 & Lambda</li>
+            <li>HTML / CSS / JS</li>
+            <li>CI/CD</li>
+          </ul>
+        </div>
+        <div class="hero-card" aria-hidden="false">
+          <!-- Replace with your image -->
+          <img src="https://source.unsplash.com/collection/895539/600x600" alt="Portrait placeholder" />
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-preview container" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Selected Projects</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Static Portfolio (S3)</h3>
+          <p>Hosted static site using S3 + CloudFront, automated with GitHub Actions.</p>
+          <p class="card-links">
+            <a href="projects.html#project1">Details</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Serverless Image API</h3>
+          <p>Lambda + API Gateway to resize images on the fly and store in S3.</p>
+          <p class="card-links">
+            <a href="projects.html#project2">Details</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Personal Blog (WordPress)</h3>
+          <p>Custom theme, optimized media and caching, deployed on EC2 + RDS.</p>
+          <p class="card-links">
+            <a href="projects.html#project3">Details</a>
+          </p>
+        </article>
+      </div>
+      <p class="center"><a class="btn" href="projects.html">View all projects</a></p>
+    </section>
+
+    <section id="contact" class="contact container" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>If you'd like to work together or want a copy of my resume, drop a message below.</p>
+      <form id="contact-form" class="form">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" id="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" id="email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" id="message" rows="4" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Send message</button>
+          <button type="reset" class="btn ghost">Reset</button>
+        </div>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> Vaishnavi Kadam</div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:youremail@example.com">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
